@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'todoList';
+
+  public tarefa = "";
+  public items = [];
+
+  addTarefa(){
+    this.items.push(this.tarefa);
+  }
+
+  removerTarefa(item){
+    this.items.splice(this.items.indexOf(item), 1);
+  }
+
 }
